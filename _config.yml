@@ -121,14 +121,14 @@ scripts:
 # ---------------
 cdn:
   css:
-    fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
+    fontawesome: /js/font-awesome-4.7.0/css/font-awesome.min.css
     # fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
   js:
-    anime: https://cdn.jsdelivr.net/npm/animejs@latest/lib/anime.min.js
-    jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-    fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
-    velocity: https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js
-    velocity-ui: https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js
+    anime: /js/anime.min.js
+    jquery: /js/jquery.min.js
+    fancybox: /js/jquery.fancybox.min.js
+    velocity: /js/velocity.min.js
+    velocity-ui: /js/velocity.ui.min.js
 
 # Post info settings
 # ---------------

@@ -1,7 +1,8 @@
 extends includes/layout.pug
 
 block top_img
-  - var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img
+  //- var top_img = page.top_img || theme.post_meta.top_img || theme.top_img || config.top_img
+  - var top_img = theme.top_img
   if (top_img && page.top_img !== false)
     - var bg_img = top_img !== true ? `background-image: url(${top_img})` : ''
     - var flag = top_img === true ? 'no-bg' : ''

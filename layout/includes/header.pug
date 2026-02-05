@@ -7,6 +7,7 @@
     span.pull-right.menus    
       each url, label in theme.menu
         a.site-page(href=url)= label
+      a.site-page(href="https://www.coderlock.site/wiki/index.php")= "我的个人维基"
   
   span.pull-right
     if (theme.algolia_search.enable || theme.local_search && theme.local_search.enable)

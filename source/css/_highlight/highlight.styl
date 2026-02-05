@@ -37,8 +37,9 @@ figure.highlight
 blockquote
   margin: 0
   padding: 0 0.6rem
-  border-left: 0.2rem solid $blockquote-padding-color
+  border-left: 0.2rem solid #89DDFF
   color: $blockquote-color
+  //background-color: #89DDFF
 
 .article-container
   pre,
@@ -81,9 +82,6 @@ blockquote
       border: none
 
     .line
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
       if wordWrap
         &:before
@@ -154,7 +152,7 @@ blockquote
       padding-right: 0.5rem
       padding-left: 0.5rem
       background-color: $highlight-gutter.bg-color
-      color: $highlight-gutter.color
+      color: #eeeeee
       text-align: right
 
     .code pre
@@ -192,9 +190,6 @@ blockquote
     .comment
       color: $highlight-comment
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .variable,
     .attribute,
@@ -210,16 +205,10 @@ blockquote
     .css .pseudo
       color: $highlight-red
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .tag
       color: $highlight-aqua
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .number,
     .preprocessor,
@@ -229,16 +218,10 @@ blockquote
     .command
       color: $highlight-orange
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .built_in
       color: $highlight-yellow
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .ruby .class .title,
     .css .rules .attribute,
@@ -253,18 +236,14 @@ blockquote
     .formula
       color: $highlight-green
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
+
 
     .keyword,
     .title,
     .css .hexcolor
       color: $highlight-aqua
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
+
 
     .function,
     .python .decorator,
@@ -276,14 +255,8 @@ blockquote
     .coffeescript .title
       color: $highlight-blue
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground
 
     .tag .attr,
     .javascript .function
       color: $highlight-purple
 
-      &::selection
-        background: $highlight-selection
-        color: $highlight-foreground

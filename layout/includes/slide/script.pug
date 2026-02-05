@@ -1,10 +1,10 @@
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/dist/reveal.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/zoom/zoom.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/search/search.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/notes/notes.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/math/math.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/markdown/markdown.js"))
-script(src=url_for("https://cdn.jsdelivr.net/npm/reveal.js@latest/plugin/highlight/highlight.js"))
+script(src=url_for("/js/reveal.js"))
+script(src=url_for("/js/zoom.js"))
+script(src=url_for("/js/search.js"))
+script(src=url_for("/js/notes.js"))
+script(src=url_for("/js/math.js"))
+script(src=url_for("/js/markdown.js"))
+script(src=url_for("/js/highlight.js"))
 - var slide = page.slide || theme.slide
 - var defaultSlide = theme.slide
 - var mouseWheel = slide.mouseWheel || defaultSlide.mouseWheel 
