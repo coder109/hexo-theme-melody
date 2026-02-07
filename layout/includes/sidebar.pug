@@ -25,16 +25,8 @@
 -
 #sidebar(data-display=display)
   if(showToc)
-    .toggle-sidebar-info.text-center
-      span(data-toggle= _p('sidebar.toggle_article'))= _p('sidebar.toggle_site')
-      hr
     .sidebar-toc
       div.sidebar-toc__title= _p('sidebar.catalog')
-      div.sidebar-toc__progress
-        span.progress-notice= _p('sidebar.have_read')
-        span.progress-num 0
-        span.progress-percentage %
-        div.sidebar-toc__progress-bar
       div.sidebar-toc__content!=toc(page.content, {list_number: tocNumber})
   .author-info(class= showToc ? 'hide' : undefined)
     .author-info__avatar.text-center

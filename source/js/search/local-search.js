@@ -1,19 +1,27 @@
 $(function () {
   var loadFlag = false
   $('a.social-icon.search').on('click', function () {
-    $('body').css('width', '100%')
-    $('body').css('overflow', 'hidden')
-    $('.search-dialog').velocity('stop')
-      .velocity('transition.expandIn', {
-        duration: 300,
-        complete: function () {
-          $('#local-search-input input').focus()
-        }
-      })
-    $('.search-mask').velocity('stop')
-      .velocity('transition.fadeIn', {
-        duration: 300
-      })
+    $('body').css({
+      'width': '100%',
+      'overflow': 'hidden'
+    })
+    
+    // 替换 Velocity expandIn → 添加 show 类触发 CSS 动画
+    //$('.search-dialog').addClass('show');
+    $('.search-dialog').css({
+      'display': 'block'
+    })
+    // 动画完成后聚焦输入框（延迟 300ms 对应动画时长）
+    setTimeout(function() {
+      $('#local-search-input input').focus();
+    }, 300);
+    
+    // 替换 Velocity fadeIn → 添加 show 类触发 CSS 动画
+    $('.search-mask').css({
+      'display': 'block',
+      'opacity': '1'
+    })
+
     if (!loadFlag) {
       search(GLOBAL_CONFIG.localSearch.path)
       loadFlag = true
@@ -22,7 +30,12 @@ $(function () {
     // shortcut: ESC
     document.addEventListener('keydown', function f(event) {
       if (event.code === 'Escape') {
-        closeSearch()
+        $('.search-dialog').css({
+          'display': 'none'
+        })
+        $('.search-mask').css({
+          'display': 'none'
+        })
         document.removeEventListener('keydown', f)
       }
     })
@@ -30,17 +43,16 @@ $(function () {
 
   var closeSearch = function () {
     $('body').css('overflow', 'auto')
-    $('.search-dialog').velocity('stop')
-      .velocity('transition.expandOut', {
-        duration: 300
-      })
-    $('.search-mask').velocity('stop')
-      .velocity('transition.fadeOut', {
-        duration: 300
-      })
+    $('.search-dialog').css({
+      'display': 'none'
+    })
+    $('.search-mask').css({
+      'display': 'none'
+    })
   }
   $('.search-mask, .search-close-button').on('click', closeSearch)
 
+  // 原搜索逻辑完全保留，无需修改
   function search(path) {
     $.ajax({
       url: GLOBAL_CONFIG.root + path,

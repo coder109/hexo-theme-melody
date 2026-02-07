@@ -14,22 +14,6 @@
     margin: 1rem 0
     width: calc(100% - 0.25rem)
 
-  .toggle-sidebar-info
-    padding-right: 0.5rem
-
-    span
-      display: inline-block
-      padding: 0 0.6rem
-      height: h = 1.6rem
-      background: $light-blue
-      color: $white
-      line-height: h
-      cursor: pointer
-      transition: all 0.2s ease-in-out
-
-      &:hover
-        background: $cyan
-
   .author-info
     margin-left: -0.25rem
     padding: 0.5rem
@@ -181,3 +165,36 @@
         width: 0
         height: 1px
         background: $cyan
+
+
+// 定义动画时长变量（便于统一修改）
+sidebar-base-duration = 200ms
+sidebar-slide-duration = 300ms
+
+// 全局过渡
+body, #sidebar, #toggle-sidebar
+  transition all sidebar-base-duration ease
+
+// 侧边栏信息切换容器
+.sidebar-info-container  // 建议给.author-info/.sidebar-toc加统一父类
+  .author-info, .sidebar-toc
+    transition transform sidebar-slide-duration ease, opacity sidebar-slide-duration ease
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    pointer-events none
+    opacity 0
+
+    // 不同元素的初始位移
+    &.author-info
+      transform translateX(-100%)
+    &.sidebar-toc
+      transform translateX(100%)
+
+    // 显示状态
+    &.show
+      transform translateX(0)
+      opacity 1
+      pointer-events auto

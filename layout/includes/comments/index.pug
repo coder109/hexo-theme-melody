@@ -1,14 +1,12 @@
-if theme.disqus.enable
-  include ./disqus.pug
-else if theme.laibili && theme.laibili.enable
-  include ./laibili.pug
-else if theme.gitment && theme.gitment.enable
-  include ./gitment.pug
-else if theme.gitalk && theme.gitalk.enable
-  include ./gitalk.pug
-else if theme.valine && theme.valine.enable
-  include ./valine.pug
-else if theme.vssue && theme.vssue.enable
-  include ./vssue.pug
-else if theme.waline && theme.waline.enable
-  include ./waline.pug
+if theme.artalk.enable
+    script(src="https://www.coderlock.site/artalk/dist/Artalk.js")
+    link(href='https://www.coderlock.site/artalk/dist/Artalk.css', rel='stylesheet')
+    #Comments 
+    script.
+        var artalk = Artalk.init({
+            el:        '#Comments',
+            pageKey:   location.pathname,
+            pageTitle: '',
+            server:    'https://www.coderlock.site/artalk',
+            site:      '寒夜雨',
+        })

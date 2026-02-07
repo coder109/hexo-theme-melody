@@ -109,13 +109,7 @@ stylesheets:
 # ---------------
 scripts:
   - /js/utils.js
-  - /js/fancybox.js
-  - /js/sidebar.js
   - /js/copy.js
-  - /js/fireworks.js
-  - /js/transition.js
-  - /js/scroll.js
-  - /js/head.js
 
 # cdn for third-party library
 # ---------------
@@ -124,11 +118,7 @@ cdn:
     fontawesome: /js/font-awesome-4.7.0/css/font-awesome.min.css
     # fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
   js:
-    anime: /js/anime.min.js
     jquery: /js/jquery.min.js
-    fancybox: /js/jquery.fancybox.min.js
-    velocity: /js/velocity.min.js
-    velocity-ui: /js/velocity.ui.min.js
 
 # Post info settings
 # ---------------

@@ -21,7 +21,7 @@ $code-block
   overflow: auto
   margin: 1rem 0
   padding: 0
-  padding-top: 1.4rem
+  //padding-top: 1.4rem
   background: $highlight-background
   color: $highlight-foreground
   font-size: $code-font-size
@@ -32,7 +32,11 @@ $code-block
     white-space: pre-wrap
 
 figure.highlight
-  position: relative
+  //position: relative
+  line-height: 0
+  font-size: 0
+  margin: 0
+  padding: 0
 
 blockquote
   margin: 0
@@ -73,8 +77,9 @@ blockquote
       z-index: 0
       min-width: 100%
       height: 1.4rem
-      background: darken($highlight-background, 5)
-      content: ""
+      //background: darken($highlight-background, 5)
+      background: #292d3e
+      //content: ""
 
     pre
       margin: 0

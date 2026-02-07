@@ -46,7 +46,7 @@ headStyle(fontsize)
   background-attachment: fixed
   background-position: center
   background-size: cover
-  opacity: 0
+  opacity: 1
 
   &.no-bg
     $bg-svg += ""
@@ -123,7 +123,7 @@ headStyle(fontsize)
 .layout
   margin: 0 auto
   width: $content-width
-  opacity: 0
+  opacity: 1
 
 #content-inner
   h1,
@@ -267,37 +267,6 @@ a.fancybox
 .code-area-wrap
   position: relative
 
-  .codeblock-language
-    position: absolute
-    z-index: 1
-    display: inline-block
-    padding: 0 0.7rem
-    color: $highlight-foreground
-    font-weight: bold
-    font-size: 0.8rem
-    line-height: 1.4rem
-
-.fa-clipboard
-  position: absolute
-  top: 0.4rem
-  right: 10px
-  z-index: 1
-  color: $highlight-aqua
-  cursor: pointer
-  transition: color 0.2s
-
-  &:hover
-    color: darken($highlight-aqua, 20%)
-
-.copy-notice
-  position: absolute
-  top: 0
-  right: 0
-  z-index: 1
-  background: darken($highlight-background, 5)
-  color: $highlight-aqua
-  opacity: 0
-
 .post-copyright
   position: relative
   margin-bottom: 1rem
@@ -389,16 +358,10 @@ a.fancybox
 @media screen and (min-width: $md)
   .layout
     width: $content-large-width
-
+  /*
   .recent-post-item
     .content
       iframe
         width: $content-large-width
         height: $iframe-large-height
-
-.katex-wrap
-  overflow: auto
-
-  if hexo-config("katex") && hexo-config("katex.hide_scrollbar")
-    &::-webkit-scrollbar
-      display: none
+  */
